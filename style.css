@@ -14,6 +14,23 @@ body {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #eee;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #04a799;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #02635b;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -29,6 +46,10 @@ body {
   justify-content: space-between;
   padding: 10px 24px;
   background-color: #111111;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
 }
 
 .header > nav > h1 {
@@ -126,4 +147,89 @@ body {
   border-radius: 5px;
   font-weight: 400;
   letter-spacing: 0.5px;
+}
+
+.features {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px 50px 40px 50px;
+}
+
+.feature {
+  margin-left: 80px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 300px;
+  height: 100%;
+  box-shadow: 1px 3px 155px 4px rgba(138, 138, 138, 0.13);
+  -webkit-box-shadow: 1px 3px 155px 4px rgba(138, 138, 138, 0.13);
+  -moz-box-shadow: 1px 3px 155px 4px rgba(138, 138, 138, 0.13);
+
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.feature > .title {
+  color: #04a799;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.feature > .description {
+  font-size: 1.1rem;
+  font-weight: 200;
+}
+
+.outro {
+  background-color: #eeeeee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.outro > .content {
+  background-color: white;
+  color: #5c5c5c;
+  padding: 30px 50px;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.outro > .content > h1 {
+  color: #02635b;
+  margin-bottom: 20px;
+}
+
+.outro > .content > p {
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 500px) {
+  .features {
+    padding: 10px 10px 50px 10px;
+  }
+  .feature {
+    margin-left: 1px;
+  }
+
+  .outro {
+    padding: 50px 15px;
+  }
+  .outro > .content {
+    padding: 20px 10px;
+  }
+  .outro > .content > h1 {
+    font-size: 1.8rem;
+  }
+  .outro > .content > p {
+    font-size: 1rem;
+  }
 }
